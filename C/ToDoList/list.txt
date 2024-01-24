@@ -1,0 +1,5 @@
+1. Can write and assign task
+2. Store that task (data)
+3. can Delete task (data)
+4. finish the task if it's complete (aka. Remove it if it's complete)
+5. make it numerical order

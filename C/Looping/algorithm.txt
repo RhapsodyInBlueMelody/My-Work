@@ -1,0 +1,4 @@
+buat variabel i
+i <- 0
+selama (i <= 100) kerjakan baris ke 4
+tampilkan "Turbo Pascal"

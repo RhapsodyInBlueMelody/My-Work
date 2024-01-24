@@ -1,0 +1,6 @@
+buat variable a dan b
+masukkan nilai a
+masukkan nilai b
+Jika (a > b) kerjakan baris ke 6 jika tidak kerjakan baris ke 5 dan berhenti
+tampikan nilai b
+tampilkan nilai a

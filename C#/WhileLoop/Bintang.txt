@@ -1,0 +1,162 @@
+.assembly extern mscorlib
+{
+  .ver 4:0:0:0
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 ) // .z\V.4..
+}
+.assembly 'Bintang'
+{
+  .custom instance void class [mscorlib]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::'.ctor'() =  (
+		01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
+		63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01       ) // ceptionThrows.
+
+  .hash algorithm 0x00008004
+  .ver  0:0:0:0
+}
+.module Bintang.exe // GUID = {E7F82425-3B49-4739-8B0E-F1BCDB496F98}
+
+
+.namespace Bintang
+{
+  .class private auto ansi beforefieldinit Bintang
+  	extends [mscorlib]System.Object
+  {
+
+    // method line 1
+    .method public hidebysig specialname rtspecialname 
+           instance default void '.ctor' ()  cil managed 
+    {
+        // Method begins at RVA 0x2050
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  call instance void object::'.ctor'()
+	IL_0006:  ret 
+    } // end of method Bintang::.ctor
+
+    // method line 2
+    .method private static hidebysig 
+           default void Main (string[] args)  cil managed 
+    {
+        // Method begins at RVA 0x2058
+	.entrypoint
+	// Code size 221 (0xdd)
+	.maxstack 2
+	.locals init (
+		string	V_0,
+		int32	V_1,
+		int32	V_2,
+		int32	V_3,
+		int32	V_4,
+		int32	V_5,
+		int32	V_6,
+		int32	V_7,
+		int32	V_8)
+	IL_0000:  ldstr "How Many Star you wanted to draw? "
+	IL_0005:  call void class [mscorlib]System.Console::Write(string)
+	IL_000a:  call string class [mscorlib]System.Console::ReadLine()
+	IL_000f:  stloc.0 
+	IL_0010:  ldloc.0 
+	IL_0011:  call int32 int32::Parse(string)
+	IL_0016:  stloc.1 
+	IL_0017:  ldloc.1 
+	IL_0018:  stloc.2 
+	IL_0019:  ldc.i4.1 
+	IL_001a:  stloc.3 
+	IL_001b:  br IL_006d
+
+	IL_0020:  ldc.i4.1 
+	IL_0021:  stloc.s 4
+	IL_0023:  br IL_0038
+
+	IL_0028:  ldstr " "
+	IL_002d:  call void class [mscorlib]System.Console::Write(string)
+	IL_0032:  ldloc.s 4
+	IL_0034:  ldc.i4.1 
+	IL_0035:  add 
+	IL_0036:  stloc.s 4
+	IL_0038:  ldloc.s 4
+	IL_003a:  ldloc.2 
+	IL_003b:  blt IL_0028
+
+	IL_0040:  ldc.i4.0 
+	IL_0041:  stloc.s 5
+	IL_0043:  br IL_0058
+
+	IL_0048:  ldstr "*"
+	IL_004d:  call void class [mscorlib]System.Console::Write(string)
+	IL_0052:  ldloc.s 5
+	IL_0054:  ldc.i4.1 
+	IL_0055:  add 
+	IL_0056:  stloc.s 5
+	IL_0058:  ldloc.s 5
+	IL_005a:  ldloc.3 
+	IL_005b:  blt IL_0048
+
+	IL_0060:  call void class [mscorlib]System.Console::WriteLine()
+	IL_0065:  ldloc.2 
+	IL_0066:  ldc.i4.1 
+	IL_0067:  sub 
+	IL_0068:  stloc.2 
+	IL_0069:  ldloc.3 
+	IL_006a:  ldc.i4.1 
+	IL_006b:  add 
+	IL_006c:  stloc.3 
+	IL_006d:  ldloc.3 
+	IL_006e:  ldloc.1 
+	IL_006f:  ble IL_0020
+
+	IL_0074:  ldloc.1 
+	IL_0075:  stloc.2 
+	IL_0076:  ldc.i4.0 
+	IL_0077:  stloc.s 6
+	IL_0079:  br IL_00ce
+
+	IL_007e:  ldc.i4.0 
+	IL_007f:  stloc.s 7
+	IL_0081:  br IL_0096
+
+	IL_0086:  ldstr " "
+	IL_008b:  call void class [mscorlib]System.Console::Write(string)
+	IL_0090:  ldloc.s 7
+	IL_0092:  ldc.i4.1 
+	IL_0093:  add 
+	IL_0094:  stloc.s 7
+	IL_0096:  ldloc.s 7
+	IL_0098:  ldloc.s 6
+	IL_009a:  blt IL_0086
+
+	IL_009f:  ldc.i4.0 
+	IL_00a0:  stloc.s 8
+	IL_00a2:  br IL_00b7
+
+	IL_00a7:  ldstr "*"
+	IL_00ac:  call void class [mscorlib]System.Console::Write(string)
+	IL_00b1:  ldloc.s 8
+	IL_00b3:  ldc.i4.1 
+	IL_00b4:  add 
+	IL_00b5:  stloc.s 8
+	IL_00b7:  ldloc.s 8
+	IL_00b9:  ldloc.2 
+	IL_00ba:  blt IL_00a7
+
+	IL_00bf:  call void class [mscorlib]System.Console::WriteLine()
+	IL_00c4:  ldloc.2 
+	IL_00c5:  ldc.i4.1 
+	IL_00c6:  sub 
+	IL_00c7:  stloc.2 
+	IL_00c8:  ldloc.s 6
+	IL_00ca:  ldc.i4.1 
+	IL_00cb:  add 
+	IL_00cc:  stloc.s 6
+	IL_00ce:  ldloc.s 6
+	IL_00d0:  ldloc.1 
+	IL_00d1:  blt IL_007e
+
+	IL_00d6:  call string class [mscorlib]System.Console::ReadLine()
+	IL_00db:  pop 
+	IL_00dc:  ret 
+    } // end of method Bintang::Main
+
+  } // end of class Bintang.Bintang
+}
+

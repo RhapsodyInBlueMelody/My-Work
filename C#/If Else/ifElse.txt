@@ -1,0 +1,83 @@
+.assembly extern mscorlib
+{
+  .ver 4:0:0:0
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 ) // .z\V.4..
+}
+.assembly 'ifElse'
+{
+  .custom instance void class [mscorlib]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::'.ctor'() =  (
+		01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
+		63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01       ) // ceptionThrows.
+
+  .hash algorithm 0x00008004
+  .ver  0:0:0:0
+}
+.module ifElse.exe // GUID = {AE4B57A0-A677-42DE-A7ED-509A3BA5AFE2}
+
+
+.namespace Switch
+{
+  .class private auto ansi beforefieldinit Switch
+  	extends [mscorlib]System.Object
+  {
+
+    // method line 1
+    .method public hidebysig specialname rtspecialname 
+           instance default void '.ctor' ()  cil managed 
+    {
+        // Method begins at RVA 0x2050
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  call instance void object::'.ctor'()
+	IL_0006:  ret 
+    } // end of method Switch::.ctor
+
+    // method line 2
+    .method private static hidebysig 
+           default void Main ()  cil managed 
+    {
+        // Method begins at RVA 0x2058
+	.entrypoint
+	// Code size 98 (0x62)
+	.maxstack 2
+	.locals init (
+		string	V_0,
+		int32	V_1)
+	IL_0000:  ldstr "1 [C#], 2 [VB]"
+	IL_0005:  call void class [mscorlib]System.Console::WriteLine(string)
+	IL_000a:  ldstr "Pilih Bahasa Pemrograman : "
+	IL_000f:  call void class [mscorlib]System.Console::Write(string)
+	IL_0014:  call string class [mscorlib]System.Console::ReadLine()
+	IL_0019:  stloc.0 
+	IL_001a:  ldloc.0 
+	IL_001b:  call int32 int32::Parse(string)
+	IL_0020:  stloc.1 
+	IL_0021:  ldloc.1 
+	IL_0022:  ldc.i4.1 
+	IL_0023:  beq IL_0034
+
+	IL_0028:  ldloc.1 
+	IL_0029:  ldc.i4.2 
+	IL_002a:  beq IL_0043
+
+	IL_002f:  br IL_0052
+
+	IL_0034:  ldstr "Pilihan yang baik, C# merupakan bahasa yang terbaik"
+	IL_0039:  call void class [mscorlib]System.Console::WriteLine(string)
+	IL_003e:  br IL_0061
+
+	IL_0043:  ldstr "VB.NET: OOP, multitreading, antarmuka pengguna yang canggih!"
+	IL_0048:  call void class [mscorlib]System.Console::WriteLine(string)
+	IL_004d:  br IL_0061
+
+	IL_0052:  ldstr "Apapun bahasa yang kamu pilih, Problem Solving adalah yang paling utama!"
+	IL_0057:  call void class [mscorlib]System.Console::WriteLine(string)
+	IL_005c:  br IL_0061
+
+	IL_0061:  ret 
+    } // end of method Switch::Main
+
+  } // end of class Switch.Switch
+}
+

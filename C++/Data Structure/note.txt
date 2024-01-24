@@ -1,0 +1,24 @@
+Kelas adalah sebuah koleksi yang memuat sejumlah tetap komponen-komponen. 
+
+Komponen kelas disebut anggota kelas
+
+Kelas di bedakan menjadi 3;
+1. Private;
+2. Public;
+3. Protected;
+
+ada 2 jenis konstruktor Parameter dan tanpa parameter;
+
+sifat konstruktor:
+
+1. nama konstruktor harus sama denga nama kelas.
+2.Sebuah konstruktor, meskiun ia berup sebuah fungsi, tidak memiliki tipe nilai balik. jadi, knstruktor bukan merupakan fungsi penghasil nilai balik atau fungsi void3. sebuah kelas dapat mempunyai lebih dari satu konstruktor. namun, semua konstruktor sebuah kelas mempunyai nama yang sama.
+4. jika sebuah kelas memiliki lebih dari satu konsuktor, tiap konstruktor harus mempunyai daftar parameter formal yang berbeda. jadi, setiap konstruktor harus memiliki jumlah parameter formal yang berbeda. juka jumlah para mater formal sama, tap konstruktor harus mempunyai tipe data parameter formal yang berbeda (sedikitnya satu parameter formal harus berbeda.)
+5. Konstruktor secara otomatis dieksekutsi ketika sebuah objek kelas memasuk skopnya(scoop). karena tidak memiliki tipe, konstruktor tidak dapat dipanggil seperti fungsi biasa.
+6. konstruktor mana yang akan dieksekusi bergantung pada tipe data dari nilai-nilai yang dilewatkan kepada objek elas ketika objek kelas dideklarasikan.
+
+
+UML (Unified Modeling Language)
+tanda "+" = Public;
+tanda "-" = Private;
+tanda "#" + Protected
